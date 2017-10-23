@@ -1,0 +1,14 @@
+define({
+  "name": "DeviceLab",
+  "version": "1.0.0",
+  "description": "Autenticação via token",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2017-10-22T17:24:38.956Z",
+    "url": "http://apidocjs.com",
+    "version": "0.17.6"
+  }
+});

@@ -1,0 +1,20 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+      "standard"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": ["error", "never"]
+    },
+    "globals": {
+      "describe": true,
+      "it": true,
+      "app": true,
+      "beforeEach": true,
+      "request": true
+    }
+  }
