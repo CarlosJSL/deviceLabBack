@@ -15,6 +15,7 @@ class UsersController {
   }
 
   create(data) {
+    console.log("ASHFIUASHIFUASHFIASFHASIFUHASIFHASIUFHSAIU")
     return this.Users.findOrCreate({
       where: { email: data.email },
       defaults: { name: data.name, password: data.password },
