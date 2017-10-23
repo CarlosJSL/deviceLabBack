@@ -16,15 +16,20 @@ const loadModels = (sequelize) => {
 }
 
 export default function (app) {
-  if (!database) {
-    const config = app.config
-    const sequelize = new Sequelize(
-      config.database,
-      config.username,
-      config.password,
-      config.params,
-    )
-
+  var match = process.env.DATABASE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/)
+  const sequelize = new Sequelize(match[5], match[1], match[2], {
+    dialect:  'postgres',
+    define: {
+      underscored: true,
+    },
+    protocol: 'postgres',
+    port:     match[4],
+    host:     match[3],
+    logging: false,
+    dialectOptions: {
+        ssl: true
+    }
+});
     database = {
       sequelize,
       Sequelize,

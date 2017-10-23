@@ -17,7 +17,6 @@ app.use(morgan('tiny'))
 app.config = config
 app.datasource = datasource(app)
 
-app.set('port', 3000)
 
 const auth = authorization(app)
 

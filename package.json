@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Criar uma aplicação full stack utilizando Angular 4 e Nodejs",
   "main": "index.js",
+  "engines": {
+    "node": ">= 7.6.0"
+  },
   "scripts": {
     "start": "babel-node index.js",
     "test-unit": " mocha --opts tests/unit/mocha.opts tests/unit/**/*.js",
