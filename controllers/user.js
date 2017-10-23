@@ -15,13 +15,13 @@ class UsersController {
   }
 
   create(data) {
-    console.log("ASHFIUASHIFUASHFIASFHASIFUHASIFHASIUFHSAIU")
+ 
     return this.Users.findOrCreate({where: { email: data.email },defaults: { name: data.name, password: data.password }})
      .then((result) => {
         console.log("----------------------------------")
         console.log(result)
         if (result[1]) {
-          //result[0].privateKey = null
+          result[0].privateKey = null
   
           return defaultResponse(result, HttpStatus.CREATED)
         }
