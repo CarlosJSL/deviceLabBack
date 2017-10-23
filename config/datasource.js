@@ -30,6 +30,7 @@ export default function (app) {
         ssl: true
     }
 });
+
     database = {
       sequelize,
       Sequelize,
@@ -39,6 +40,6 @@ export default function (app) {
     database.models = loadModels(sequelize)
 
     sequelize.sync().done(() => database)
-  }
+  
   return database
 }
