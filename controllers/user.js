@@ -22,13 +22,8 @@ class UsersController {
       .then((result) => {
         if (result[1]) {
           result[0].privateKey = null
-          console.log("111111111111111")
-          console.log(result)
-          console.log("222222222222222")
-          console.log(result[0])
-          console.log("333333333333333")
-          console.log(result[1])
-          return defaultResponse(result[0], HttpStatus.CREATED)
+  
+          return defaultResponse(result, HttpStatus.CREATED)
         }
 
         return errorResponse('Usuário já está cadastrado!', HttpStatus.BAD_REQUEST)
