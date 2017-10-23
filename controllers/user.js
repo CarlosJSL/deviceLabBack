@@ -23,7 +23,7 @@ class UsersController {
       .then((result) => {
         console.log(result)
         if (result[1]) {
-          result[0].privateKey = null
+          //result[0].privateKey = null
   
           return defaultResponse(result, HttpStatus.CREATED)
         }
