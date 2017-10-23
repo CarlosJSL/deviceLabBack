@@ -20,6 +20,7 @@ class UsersController {
       defaults: { name: data.name, password: data.password },
     })
       .then((result) => {
+        console.log(result)
         if (result[1]) {
           result[0].privateKey = null
   
